@@ -1,0 +1,319 @@
+[
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "site",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "site",
+        "description": "site",
+        "detail": "site",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "Scrap",
+        "importPath": "scraper",
+        "description": "scraper",
+        "isExtraImport": true,
+        "detail": "scraper",
+        "documentation": {}
+    },
+    {
+        "label": "argparse",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "argparse",
+        "description": "argparse",
+        "detail": "argparse",
+        "documentation": {}
+    },
+    {
+        "label": "webdriver",
+        "importPath": "selenium",
+        "description": "selenium",
+        "isExtraImport": true,
+        "detail": "selenium",
+        "documentation": {}
+    },
+    {
+        "label": "WebDriverWait",
+        "importPath": "selenium.webdriver.support.ui",
+        "description": "selenium.webdriver.support.ui",
+        "isExtraImport": true,
+        "detail": "selenium.webdriver.support.ui",
+        "documentation": {}
+    },
+    {
+        "label": "expected_conditions",
+        "importPath": "selenium.webdriver.support",
+        "description": "selenium.webdriver.support",
+        "isExtraImport": true,
+        "detail": "selenium.webdriver.support",
+        "documentation": {}
+    },
+    {
+        "label": "By",
+        "importPath": "selenium.webdriver.common.by",
+        "description": "selenium.webdriver.common.by",
+        "isExtraImport": true,
+        "detail": "selenium.webdriver.common.by",
+        "documentation": {}
+    },
+    {
+        "label": "BeautifulSoup",
+        "importPath": "bs4",
+        "description": "bs4",
+        "isExtraImport": true,
+        "detail": "bs4",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "matplotlib.pyplot",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "matplotlib.pyplot",
+        "description": "matplotlib.pyplot",
+        "detail": "matplotlib.pyplot",
+        "documentation": {}
+    },
+    {
+        "label": "re",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "re",
+        "description": "re",
+        "detail": "re",
+        "documentation": {}
+    },
+    {
+        "label": "numpy",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "numpy",
+        "description": "numpy",
+        "detail": "numpy",
+        "documentation": {}
+    },
+    {
+        "label": "config",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "config",
+        "description": "config",
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "bin_dir",
+        "kind": 5,
+        "importPath": ".env.bin.activate_this",
+        "description": ".env.bin.activate_this",
+        "peekOfCode": "bin_dir = os.path.dirname(abs_file)\nbase = bin_dir[: -len(\"bin\") - 1]  # strip away the bin part from the __file__, plus the path separator\n# prepend bin to PATH (this file is inside the bin directory)\nos.environ[\"PATH\"] = os.pathsep.join([bin_dir] + os.environ.get(\"PATH\", \"\").split(os.pathsep))\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"../lib/python3.10/site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if \"\" else path)",
+        "detail": ".env.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "base",
+        "kind": 5,
+        "importPath": ".env.bin.activate_this",
+        "description": ".env.bin.activate_this",
+        "peekOfCode": "base = bin_dir[: -len(\"bin\") - 1]  # strip away the bin part from the __file__, plus the path separator\n# prepend bin to PATH (this file is inside the bin directory)\nos.environ[\"PATH\"] = os.pathsep.join([bin_dir] + os.environ.get(\"PATH\", \"\").split(os.pathsep))\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"../lib/python3.10/site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if \"\" else path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]",
+        "detail": ".env.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ[\"PATH\"]",
+        "kind": 5,
+        "importPath": ".env.bin.activate_this",
+        "description": ".env.bin.activate_this",
+        "peekOfCode": "os.environ[\"PATH\"] = os.pathsep.join([bin_dir] + os.environ.get(\"PATH\", \"\").split(os.pathsep))\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"../lib/python3.10/site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if \"\" else path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": ".env.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ[\"VIRTUAL_ENV\"]",
+        "kind": 5,
+        "importPath": ".env.bin.activate_this",
+        "description": ".env.bin.activate_this",
+        "peekOfCode": "os.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"../lib/python3.10/site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if \"\" else path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": ".env.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "prev_length",
+        "kind": 5,
+        "importPath": ".env.bin.activate_this",
+        "description": ".env.bin.activate_this",
+        "peekOfCode": "prev_length = len(sys.path)\nfor lib in \"../lib/python3.10/site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if \"\" else path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": ".env.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "sys.path[:]",
+        "kind": 5,
+        "importPath": ".env.bin.activate_this",
+        "description": ".env.bin.activate_this",
+        "peekOfCode": "sys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": ".env.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "sys.real_prefix",
+        "kind": 5,
+        "importPath": ".env.bin.activate_this",
+        "description": ".env.bin.activate_this",
+        "peekOfCode": "sys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": ".env.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "sys.prefix",
+        "kind": 5,
+        "importPath": ".env.bin.activate_this",
+        "description": ".env.bin.activate_this",
+        "peekOfCode": "sys.prefix = base",
+        "detail": ".env.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "CHROME_BINARY_LOCATION",
+        "kind": 5,
+        "importPath": "config",
+        "description": "config",
+        "peekOfCode": "CHROME_BINARY_LOCATION = '/home/araz/Apps/chrome/chrome'\nCHROMEDRIVER_BINARY_LOCATION = '/usr/bin/chromedriver'",
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "CHROMEDRIVER_BINARY_LOCATION",
+        "kind": 5,
+        "importPath": "config",
+        "description": "config",
+        "peekOfCode": "CHROMEDRIVER_BINARY_LOCATION = '/usr/bin/chromedriver'",
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "process_links",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def process_links(input_file):\n    # Read the CSV file into a pandas DataFrame\n    txt_file = open(input_file, 'r')\n    lines = [line.strip() for line in txt_file]  # remove trailing\n    # CR/LF characters, if present.\n    return lines\n# Define command-line arguments using argparse\nparser = argparse.ArgumentParser(description='Process data from a CSV file.')\nparser.add_argument('input_file', type=str, help='Path to the input CSV file')\n# Parse the command-line arguments",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "parser",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "parser = argparse.ArgumentParser(description='Process data from a CSV file.')\nparser.add_argument('input_file', type=str, help='Path to the input CSV file')\n# Parse the command-line arguments\nargs = parser.parse_args()\nlinks = process_links(args.input_file)\nscrp = Scrap(\"\")\nfor link in links:\n    scrp.url = link\n    scrp.run()",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "args",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "args = parser.parse_args()\nlinks = process_links(args.input_file)\nscrp = Scrap(\"\")\nfor link in links:\n    scrp.url = link\n    scrp.run()",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "links",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "links = process_links(args.input_file)\nscrp = Scrap(\"\")\nfor link in links:\n    scrp.url = link\n    scrp.run()",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "scrp",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "scrp = Scrap(\"\")\nfor link in links:\n    scrp.url = link\n    scrp.run()",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "Scrap",
+        "kind": 6,
+        "importPath": "scraper",
+        "description": "scraper",
+        "peekOfCode": "class Scrap():\n    def __init__(self, url) -> None:\n        self.url = url\n    def get_page_source(self, class_name):\n        '''\n        class_name= HTML tags find with class name\n        '''\n        driver.get(self.url)\n        WebDriverWait(driver, 30).until(\n            EC.presence_of_element_located((By.CLASS_NAME, class_name)))",
+        "detail": "scraper",
+        "documentation": {}
+    },
+    {
+        "label": "options",
+        "kind": 5,
+        "importPath": "scraper",
+        "description": "scraper",
+        "peekOfCode": "options = webdriver.ChromeOptions()\noptions.add_argument('--headless')\noptions.add_argument('--lang=en-US')\noptions.binary_location = config.CHROME_BINARY_LOCATION\noptions.chrome_driver_binary = config.CHROMEDRIVER_BINARY_LOCATION\ndriver = webdriver.Chrome(options=options)\nbusy_times = {'5': 0,\n              '6': 0,\n              '7': 0,\n              '8': 0,",
+        "detail": "scraper",
+        "documentation": {}
+    },
+    {
+        "label": "options.binary_location",
+        "kind": 5,
+        "importPath": "scraper",
+        "description": "scraper",
+        "peekOfCode": "options.binary_location = config.CHROME_BINARY_LOCATION\noptions.chrome_driver_binary = config.CHROMEDRIVER_BINARY_LOCATION\ndriver = webdriver.Chrome(options=options)\nbusy_times = {'5': 0,\n              '6': 0,\n              '7': 0,\n              '8': 0,\n              '9': 0,\n              '10': 0,\n              '11': 0,",
+        "detail": "scraper",
+        "documentation": {}
+    },
+    {
+        "label": "options.chrome_driver_binary",
+        "kind": 5,
+        "importPath": "scraper",
+        "description": "scraper",
+        "peekOfCode": "options.chrome_driver_binary = config.CHROMEDRIVER_BINARY_LOCATION\ndriver = webdriver.Chrome(options=options)\nbusy_times = {'5': 0,\n              '6': 0,\n              '7': 0,\n              '8': 0,\n              '9': 0,\n              '10': 0,\n              '11': 0,\n              '12': 0,",
+        "detail": "scraper",
+        "documentation": {}
+    },
+    {
+        "label": "driver",
+        "kind": 5,
+        "importPath": "scraper",
+        "description": "scraper",
+        "peekOfCode": "driver = webdriver.Chrome(options=options)\nbusy_times = {'5': 0,\n              '6': 0,\n              '7': 0,\n              '8': 0,\n              '9': 0,\n              '10': 0,\n              '11': 0,\n              '12': 0,\n              '13': 0,",
+        "detail": "scraper",
+        "documentation": {}
+    },
+    {
+        "label": "busy_times",
+        "kind": 5,
+        "importPath": "scraper",
+        "description": "scraper",
+        "peekOfCode": "busy_times = {'5': 0,\n              '6': 0,\n              '7': 0,\n              '8': 0,\n              '9': 0,\n              '10': 0,\n              '11': 0,\n              '12': 0,\n              '13': 0,\n              '14': 0,",
+        "detail": "scraper",
+        "documentation": {}
+    }
+]
